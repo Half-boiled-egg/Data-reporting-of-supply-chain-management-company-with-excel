@@ -1,0 +1,11 @@
+#VBA Code to convert selected data into pdf from applicant data
+Public Sub Project2_PDF()
+    Dim Rng As Range
+    Dim j As Integer
+    Dim i As Integer
+    Set Rng = Selection
+    j = Rng.Select
+    For i = 1 To j
+        If Not Rng = "" Then Rng.PrintOut
+    Next
+End Sub
