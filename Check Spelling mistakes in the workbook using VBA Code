@@ -1,0 +1,7 @@
+#Check Spelling mistakes in the workbook using VBA Code
+Public Sub Project2_Spellingcheck()
+    Dim Cell As Range
+    For Each Cell In ActiveSheet.UsedRange
+        If Not Application.CheckSpelling(Word:=Cell.Text) Then Cell.Interior.ColorIndex = 6
+    Next
+End Sub
